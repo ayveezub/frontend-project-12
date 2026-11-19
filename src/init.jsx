@@ -1,5 +1,7 @@
+import { MantineProvider } from "@mantine/core";
 import { BrowserRouter, StaticRouter } from "react-router-dom";
 import App from "./App.jsx";
+import "@mantine/core/styles.css";
 
 const Router = typeof document === "undefined" ? StaticRouter : BrowserRouter;
 
@@ -9,9 +11,11 @@ const init = async (socket) => {
   });
 
   return (
-    <Router>
-      <App />
-    </Router>
+    <MantineProvider>
+      <Router>
+        <App />
+      </Router>
+    </MantineProvider>
   );
 };
 

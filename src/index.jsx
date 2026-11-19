@@ -4,7 +4,7 @@ import { io } from "socket.io-client";
 import init from "./init.jsx";
 
 const app = async () => {
-  const root = ReactDOM.createRoot(document.querySelector("#root"));
+  const root = ReactDOM.createRoot(document.querySelector("#chat"));
   const socket = io();
   root.render(await init(socket));
 };
