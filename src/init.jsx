@@ -1,9 +1,18 @@
+import { BrowserRouter, StaticRouter } from "react-router-dom";
 import App from "./App.jsx";
 
-// oxlint-disable-next-line
+const Router = typeof document === "undefined" ? StaticRouter : BrowserRouter;
+
 const init = async (socket) => {
-  // i18n instance, request client, and stores will appear here
-  return <App />;
+  socket.on("connect", () => {
+    // Reconnect / presence handling will live here.
+  });
+
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
 };
 
 export default init;
