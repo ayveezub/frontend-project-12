@@ -2,12 +2,12 @@
 
 Hexlet educational Slack-like chat starter: React 19, Vite, Socket.IO.
 
-Use npm. Never pnpm or yarn.
+Use npm.
 
 ## Commands
 
 ```bash
-npm ci          # install (not npm install)
+npm ci          # install
 make develop    # backend :5001 + Vite :5002
 npm test        # Vitest
 npm run lint    # oxlint + oxfmt --check
@@ -21,6 +21,7 @@ npm run lint    # oxlint + oxfmt --check
 - Do not edit generated files: `**/*.gen.ts`, `src/types/handlers/**`, `src/@types/**`.
 - Keep `init(socket)` async: accept the socket, subscribe with `socket.on`, return a React element. Details: [docs/testing.md](docs/testing.md).
 - Use Conventional Commits. Details: [docs/git-workflow.md](docs/git-workflow.md).
+- After any change to files in a git-tracked directory, recommend a commit message.
 
 ## Topic files
 

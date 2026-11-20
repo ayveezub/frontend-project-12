@@ -26,7 +26,7 @@ function LoginPage() {
           key={form.key("password")}
           {...form.getInputProps("password")}
         />
-        <Button type="submit">Sign in</Button>
+        <Button type="submit">Log In</Button>
       </form>
     </>
   );

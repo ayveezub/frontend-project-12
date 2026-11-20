@@ -1,6 +1,6 @@
 # Code style
 
-Lint and format with **oxlint** and **oxfmt**, not ESLint or Prettier.
+Lint and format with **oxlint** and **oxfmt**.
 
 `oxlint.config.ts` and `oxfmt.config.ts` are copied from `hexlet-exercise-kit` and must stay as-is. oxlint/oxfmt find them without `--config`. They use a plain default export, not `defineConfig`.
 

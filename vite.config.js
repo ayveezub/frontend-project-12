@@ -4,6 +4,10 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  test: {
+    environment: "jsdom",
+    setupFiles: "./__tests__/setup.js",
+  },
   server: {
     port: 5002,
     proxy: {
