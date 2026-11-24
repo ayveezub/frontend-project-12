@@ -82,6 +82,7 @@ describe("login page", () => {
 
     await waitFor(() => expect(loginResolver).toHaveBeenCalledTimes(1));
 
+    expect(await screen.findByRole("alert")).toHaveTextContent("Wrong username or password");
     expect(screen.getByRole("heading", { name: "Login" })).toBeInTheDocument();
     expect(window.location.pathname).toBe("/login");
     expect(localStorage.getItem("auth")).toBeNull();
