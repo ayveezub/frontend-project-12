@@ -26,6 +26,7 @@ beforeAll(() => {
 afterEach(() => {
   cleanup();
   server.resetHandlers();
+  localStorage.clear();
   window.history.pushState({}, "", "/");
 });
 
