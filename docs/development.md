@@ -19,6 +19,8 @@ npm ci
 
 The backend is `@hexlet/chat-server`. Its `start-server` binary listens on **5001**.
 
+Default in-memory account: `admin` / `admin`.
+
 Vite (`vite.config.js`) listens on **5002** and proxies:
 
 - `/api` → `http://localhost:5001`
