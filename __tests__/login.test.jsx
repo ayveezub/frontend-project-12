@@ -11,8 +11,10 @@ import { server } from "./mocks/server.js";
 describe("login page", () => {
   beforeEach(() => {
     loginResolver.mockClear();
-    localStorage.clear();
+    // setState goes through persist and writes to localStorage,
+    // so clear the storage after the store has been reset.
     useAuthStore.setState({ token: null, username: null });
+    localStorage.clear();
   });
 
   test("successful login sends credentials, stores the token, and redirects to the chat page", async () => {
